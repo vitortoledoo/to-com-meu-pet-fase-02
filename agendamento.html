@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendamento — To com meu pet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light border-bottom navbar-light">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logositelongo.png" alt="Logo Tô com meu pet" class="navbar-logo me-2">
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navMain" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+        <li class="nav-item"><a class="nav-link active" href="agendamento.html">Agendamento</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+  <h1 class="h3 mb-3">Agendar serviço</h1>
+
+  <!-- ADICIONE needs-validation -->
+  <form id="formAgendamento" class="needs-validation" novalidate>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label" for="servico">Serviço *</label>
+        <select id="servico" class="form-select" required>
+          <option value="">Selecione…</option>
+          <option value="banho">Banho</option>
+          <option value="tosa">Tosa</option>
+          <option value="Entrega das compra">Compras</option>
+        </select>
+        <div class="invalid-feedback">Escolha um serviço.</div>
+      </div>
+
+      <!-- Data/Hora -->
+      <div class="col-md-6">
+        <label class="form-label" for="dtServico">Data e hora *</label>
+        <input type="datetime-local" id="dtServico" class="form-control" required>
+        <div class="invalid-feedback">Escolha uma data e hora válidas.</div>
+      </div>
+
+      <div class="col-12">
+        <span class="form-label d-block">Método *</span>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="metodo" id="telebusca" value="telebusca" required>
+          <label class="form-check-label" for="telebusca">Pega e traz</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="metodo" id="local" value="local">
+          <label class="form-check-label" for="local">Retirar no local</label>
+        </div>
+        <!-- sem d-block, aparece só após a validação -->
+        <div class="invalid-feedback">Selecione um método.</div>
+      </div>
+
+      <!-- Bloco de endereço (inicia oculto) -->
+      <div id="blocoEndereco" class="row g-3 d-none">
+        <div class="col-md-8">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input type="text" id="endereco" class="form-control" placeholder="Rua Exemplo, Bairro"
+                 data-required-when="telebusca">
+          <div class="invalid-feedback">Informe o endereço para tele-busca.</div>
+        </div>
+        <div class="col-md-4">
+          <label for="numero" class="form-label">Número</label>
+          <input type="number" id="numero" class="form-control" min="1"
+                 data-required-when="telebusca">
+          <div class="invalid-feedback">Informe um número válido.</div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="cep" class="form-label">CEP</label>
+          
+          <input type="text" id="cep" class="form-control" pattern="\d{5}-?\d{3}"
+                 placeholder="00000-000" data-required-when="telebusca">
+          <div class="invalid-feedback">CEP no formato 00000-000.</div>
+        </div>
+        <div class="col-md-4">
+          <label for="cidade" class="form-label">Cidade</label>
+          <input type="text" id="cidade" class="form-control" data-required-when="telebusca">
+          <div class="invalid-feedback">Informe a cidade.</div>
+        </div>
+        <div class="col-md-4">
+          <label for="uf" class="form-label">UF</label>
+          <select id="uf" class="form-select" data-required-when="telebusca">
+            <option value="">Selecione...</option>
+            <option>SP</option>
+            <option>RJ</option>
+            <option>MG</option>
+            <!-- etc -->
+          </select>
+          <div class="invalid-feedback">Selecione a UF.</div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Confirmar agendamento</button>
+      </div>
+    </div>
+  </form>
+</main>
+
+<!-- Bootstrap JS (bundle) + seu main.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
+
+<footer class="container text-center my-4 small">
+  <hr>
+  <p>&copy; 2025 To com meu pet - Todos os direitos reservados.

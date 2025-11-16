@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To com meu pet — Produtos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .product-card img { transition: transform .25s ease; }
+    .product-card:hover img { transform: scale(1.03); }
+    .price-badge { position: absolute; top: .75rem; left: .75rem; }
+    .category-title { border-bottom: 2px solid #e9ecef; padding-bottom: .25rem; margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light border-bottom">
+  <div class="container">
+   <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/logositelongo.png" alt="Logo Tô com meu pet" class="navbar-logo me-2">
+      
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navMain" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+        <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<main class="container my-4">
+
+  <section id="acessorios">
+    <h2 class="h4 category-title">Acessórios</h2>
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card product-card h-100 position-relative">
+          <span class="badge bg-primary price-badge">R$ 149,90</span>
+          <a href="agendamento.html?item=Cama%20Confort%20M&servico=banho" class="text-decoration-none">
+            <img src="img/acessorios1.png" class="card-img-top" alt="Cama Confort M para pets">
+          </a>
+          <div class="card-body">
+            <h3 class="h6 card-title mb-1">Cama Confort M</h3>
+            <p class="card-text small text-muted">Cama macia para cães e gatos de porte médio.</p>
+            <a href="agendamento.html?item=Cama%20Confort%20M&servico=banho" class="btn btn-sm btn-outline-primary">Adicionar no carrinho</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card product-card h-100 position-relative">
+          <span class="badge bg-primary price-badge">R$ 29,90</span>
+          <a href="agendamento.html?item=Brinquedo%20Bola%20Mordedor&servico=tosa" class="text-decoration-none">
+            <img src="img/acessorios2.png" class="card-img-top" alt="Brinquedo bola mordedor para cães">
+          </a>
+          <div class="card-body">
+            <h3 class="h6 card-title mb-1">Brinquedo Bola Mordedor</h3>
+            <p class="card-text small text-muted">Bola resistente para estímulo e diversão.</p>
+            <a href="agendamento.html?item=Brinquedo%20Bola%20Mordedor&servico=tosa" class="btn btn-sm btn-outline-primary">Adicionar no carrinho</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="racoes">
+    <h2 class="h4 category-title">Rações</h2>
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card product-card h-100 position-relative">
+          <span class="badge bg-primary price-badge">R$ 189,90</span>
+          <a href="agendamento.html?item=Racao%20Premium%2015kg&servico=banho" class="text-decoration-none">
+            <img src="img/racao1.png" class="card-img-top" alt="Saco de ração premium cães 15kg">
+          </a>
+          <div class="card-body">
+            <h3 class="h6 card-title mb-1">Ração Premium Cães Adultos 15kg</h3>
+            <p class="card-text small text-muted">Ração completa e balanceada, não perecível.</p>
+            <a href="agendamento.html?item=Racao%20Premium%2015kg&servico=banho" class="btn btn-sm btn-outline-primary">Adicionar no carrinho</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card product-card h-100 position-relative">
+          <span class="badge bg-primary price-badge">R$ 99,90</span>
+          <a href="agendamento.html?item=Racao%20Gatos%20Filhotes%203kg&servico=banho" class="text-decoration-none">
+            <img src="img/racao2.png" class="card-img-top" alt="Saco de ração para gatos filhotes 3kg">
+          </a>
+          <div class="card-body">
+            <h3 class="h6 card-title mb-1">Ração Gatos Filhotes 3kg</h3>
+            <p class="card-text small text-muted">Fórmula específica para crescimento saudável.</p>
+            <a href="agendamento.html?item=Racao%20Gatos%20Filhotes%203kg&servico=banho" class="btn btn-sm btn-outline-primary">Adicionar no carrinho</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="higiene">
+    <h2 class="h4 category-title">Higiene e Limpeza</h2>
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card product-card h-100 position-relative">
+          <span class="badge bg-primary price-badge">R$ 69,90</span>
+          <a href="agendamento.html?item=Tapete%20Higienico%2030un&servico=tosa" class="text-decoration-none">
+            <img src="img/higiene1.png" class="card-img-top" alt="Pacote com 30 tapetes higiênicos">
+          </a>
+          <div class="card-body">
+            <h3 class="h6 card-title mb-1">Tapete Higiênico (30 unid.)</h3>
+            <p class="card-text small text-muted">Alta absorção e controle de odores.</p>
+            <a href="agendamento.html?item=Tapete%20Higienico%2030un&servico=tosa" class="btn btn-sm btn-outline-primary">Adicionar no carrinho</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card product-card h-100 position-relative">
+          <span class="badge bg-primary price-badge">R$ 34,90</span>
+          <a href="agendamento.html?item=Shampoo%20Neutro%20500ml&servico=banho" class="text-decoration-none">
+            <img src="img/higiene2.png" class="card-img-top" alt="Frasco de shampoo neutro 500ml para pets">
+          </a>
+          <div class="card-body">
+            <h3 class="h6 card-title mb-1">Shampoo Neutro 500ml</h3>
+            <p class="card-text small text-muted">Limpeza suave, sem parabenos.</p>
+            <a href="agendamento.html?item=Shampoo%20Neutro%20500ml&servico=banho" class="btn btn-sm btn-outline-primary">Adicionar no carrinho</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="container text-center my-4 small">
+  <hr>
+  <p>&copy; 2025 To com meu pet - Todos direitos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

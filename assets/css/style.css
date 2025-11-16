@@ -1,0 +1,156 @@
+:root { --brand: #0d6efd; }
+main img { max-width: 100%; height: auto; }
+footer { text-align: center; margin: 2rem 0; }
+fieldset { border-color: #ddd !important; }
+legend { font-size: 1rem; font-weight: 600; }
+/* Extras */
+.product-card img { object-fit: cover; }
+/* ====== Base / tokens ====== */
+:root{
+  --radius: 16px;
+}
+body { background: #fafafa; }
+
+/* ====== Navbar ====== */
+.brand-logo { height: 28px; width: auto; display: block; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.35));
+}
+
+/* ====== Carrossel ====== */
+#carrosselHome .carousel-inner { border-radius: var(--radius); overflow: hidden; }
+#carrosselHome .carousel-item img{
+  /* recorte responsivo sem estourar */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 6;
+  object-fit: cover;
+}
+#carrosselHome .carousel-caption{
+  background: rgba(0, 0, 0, 0);
+  border-radius: 12px;
+  padding: .5rem .75rem;
+}
+
+/* ====== Cards ====== */
+.card{
+  border: 1px solid #e9ecef;
+  border-radius: var(--radius);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+.card-img-top{
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+.card .btn { border-radius: 999px; }
+
+/* ====== Ajuste de cards de serviços ====== */
+.card-img-top {
+  width: 100%;
+  height: 220px; /* altura fixa igual pra todos */
+  object-fit: cover; /* preenche o card cortando o excesso */
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+
+
+/* ====== Seções ====== */
+.category-title{
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: .25rem;
+  margin-top: 1.5rem;
+}
+
+/* ====== Utilitárias ====== */
+.rounded-3{ border-radius: var(--radius) !important; }
+
+/* ===== Cabeçalho centralizado (logo + navbar embaixo) ===== */
+.site-header{
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
+  background: #fff;
+}
+
+.branding{ /* container do logo + textos */
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* força ficar um embaixo do outro */
+  text-align: center;
+}
+
+.brand-mark{           /* imagem do logo (menor) */
+  height: 150px;
+  width: auto;
+  display: inline-block;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.08));
+  margin-bottom: .5rem;
+}
+@media (min-width: 768px) {
+  .brand-mark { height: 150px; }  /* aumenta no PC */}
+
+
+.site-title{
+  font-weight: 700;
+  letter-spacing: .2px;
+  margin: 0 0 .25rem 0;
+}
+
+.site-tagline{
+  font-size: .95rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* navbar que fica abaixo do logo, centralizada */
+.site-header .site-nav .nav{
+  justify-content: center;
+}
+.site-header .nav-link{
+  color: #495057;
+  padding: .45rem .8rem;
+  border-radius: 999px;
+  transition: background .15s ease, color .15s ease;
+}
+.site-header .nav-link:hover{
+  background: #f1f3f5;
+  color: #212529;
+}
+.site-header .nav-link.active{
+  background: #e7f1ff;
+  color: #0d6efd;
+  font-weight: 600;
+}
+/* ===== Logo na navbar ===== */
+.navbar-logo {
+  height: 90px;          /* altura ajustável */
+  width: auto;
+  border-radius: 0%;    /* deixa o logo circular, opcional */
+  margin-right: 8px;     /* espaço entre logo e texto */
+}
+
+.navbar-brand span {
+  font-size: 1.1rem;
+  color: #0d6efd;        /* azul padrão Bootstrap */
+}
+
+.navbar-brand:hover span {
+  color: #0a58ca;        /* tom mais escuro no hover */
+}
+
+/* Tabela de serviços */
+.table-responsive {
+  border-radius: 16px;            /* acompanha seu --radius */
+  overflow: hidden;
+}
+.table caption {
+  caption-side: top;              /* título da tabela acima */
+  font-weight: 600;
+}
